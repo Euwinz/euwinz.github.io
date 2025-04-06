@@ -1,0 +1,111 @@
+/* Smooth background animation (Day/Night transition) */
+ @keyframes backgroundMove {
+            0% { background-color: #003366; }
+            50% { background-color: #001f4d; }
+            100% { background-color: #003366; }
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            animation: backgroundMove 20s infinite alternate ease-in-out;
+            color: white;
+            margin: 20px;
+        }
+
+        h1 {
+            color: yellow;
+            font-size: 28px;
+        }
+        
+        h2 {
+            font-size: 18px;
+        }
+
+        select, button {
+            padding: 10px;
+            margin: 8px;
+            border-radius: 6px;
+            border: none;
+            font-size: 14px;
+            transition: transform 0.2s, background-color 0.3s;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        #weatherDisplay {
+            margin-top: 20px;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .weather-card {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+            background-color: black;
+            color: yellow;
+            width: 140px;
+            text-align: center;
+            flex: 0 0 auto;
+            font-size: 12px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Weather card hover effect */
+                .weather-card:hover {
+                    transform: scale(1.08);
+                    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+                }
+        
+        /* Weather Icon Animations */
+                .weather-icon {
+                    font-size: 30px;
+                    display: block;
+                    margin: 5px auto;
+                }
+        
+        /* Sun Animation */
+                .sun {
+                    animation: rotateSun 5s linear infinite;
+                }
+        
+                @keyframes rotateSun {
+                    0% { transform: rotate(0deg); }
+                    100% { transform: rotate(360deg); }
+                }
+        
+        /* Rain Animation */
+                .rain {
+                    animation: rainDrop 1s linear infinite;
+                }
+        
+                @keyframes rainDrop {
+                    0% { transform: translateY(0px); opacity: 1; }
+                    100% { transform: translateY(10px); opacity: 0.6; }
+                }
+        
+        /* Cloud Animation */
+                .cloud {
+                    animation: moveCloud 4s ease-in-out infinite alternate;
+                }
+        
+                @keyframes moveCloud {
+                    0% { transform: translateX(0px); }
+                    100% { transform: translateX(5px); }
+                }  
+                  
