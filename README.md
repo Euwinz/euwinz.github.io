@@ -38,6 +38,7 @@ Get real-time 7-day forecasts for over 200 European cities with dynamic visuals,
 
 ## 📸 Screenshots
 
+https://github.com/Euwinz/euwinz.github.io/blob/main/Images/mywebsite_screenshot.png
 
 ---
 
